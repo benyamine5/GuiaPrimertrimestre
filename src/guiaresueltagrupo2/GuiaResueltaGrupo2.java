@@ -16,6 +16,7 @@ package guiaresueltagrupo2;
 import guiaresueltagrupo2.Punto1.FuncionesyAtributos;
 import guiaresueltagrupo2.Punto2.FuncionesyAtributos2;
 import guiaresueltagrupo2.Punto3.FuncionesyAtributos3;
+import guiaresueltagrupo2.Punto4.FuncionesyAtributos4;
 import guiaresueltagrupo2.PuntoFinal.FuncionesyAtributos10;
 import java.util.Scanner;
 
@@ -27,6 +28,7 @@ public class GuiaResueltaGrupo2 {
         FuncionesyAtributos obp1 = new FuncionesyAtributos();
         FuncionesyAtributos2 obp2 = new FuncionesyAtributos2();
         FuncionesyAtributos3 obp3 = new FuncionesyAtributos3();
+        FuncionesyAtributos4 obp4 = new FuncionesyAtributos4();
         FuncionesyAtributos10 obp10 = new FuncionesyAtributos10();
         do {
             System.err.println("MENU PRINCIPAL");
@@ -57,7 +59,7 @@ public class GuiaResueltaGrupo2 {
                         System.out.print("Digite un número: ");
                         obp1.n = Integer.parseInt(entrada.nextLine());
                         obp1.Funcionpareimpar();
-                        System.err.print("Si desea salir al anterior menu digite 0 de lo contrario digite otro numero: ");
+                        System.err.print("Si regresar al menu anterior digite 0 de lo contrario digite otro numero: ");
                         op = Integer.parseInt(entrada.nextLine());
                     } while (op != 0);
 
@@ -74,7 +76,7 @@ public class GuiaResueltaGrupo2 {
                         obp2.seg = Integer.parseInt(entrada.nextLine());
                         obp2.funcionhhmmss();
                         System.out.println(obp2.funcionhhmmss());
-                        System.err.print("Si desea salir al anterior menu digite 0 de lo contrario digite otro numero: ");
+                        System.err.print("Si desea regresar al menu anterior digite 0 de lo contrario digite otro numero: ");
                         op = Integer.parseInt(entrada.nextLine());
                     } while (op != 0);
 
@@ -84,20 +86,20 @@ public class GuiaResueltaGrupo2 {
                                        Enunciado 3:
                                        Dado un número x determinar si es múltiplo de otro número y.
                                        """);
-                    do {                        
+                    do {
                         System.err.println("Determinador de multiplos");
                         System.out.print("Digite el numero a determinar si es multiplo: ");
                         obp3.nv = Integer.parseInt(entrada.nextLine());
                         System.out.print("Digite el numero que desea saber si es multiplo: ");
                         obp3.nmultiplo = Integer.parseInt(entrada.nextLine());
                         obp3.funcionMultiplo();
-                        System.err.print("Si desea salir al anterior menu digite 0 de lo contrario digite otro numero: ");
+                        System.err.print("Si desea regresar al menu anterior digite 0 de lo contrario digite otro numero: ");
                         op = Integer.parseInt(entrada.nextLine());
-                    } while (op!=0);
+                    } while (op != 0);
 
                     break;
                 case 4:
-                    System.out.println("""
+                    System.err.println("""
                                        Enunciado 4:
                                        Desarrollar un programa que, utilizando una función muestre en pantalla N filas de
                                        números naturales impares, de los siguientes números y en la forma siguiente:
@@ -107,6 +109,14 @@ public class GuiaResueltaGrupo2 {
                                        ……….
                                        N (número de filas) se debe indicar por teclado.
                                        """);
+                    do {
+                        System.err.println("Funcion numeros de filas impares");
+                        System.out.print("Digite el número de filas que desea: ");
+                        obp4.nfilas = Integer.parseInt(entrada.nextLine());
+                        obp4.funcionnfilas();
+                        System.err.print("Si desea regresar al menu anterior digite 0 de lo contrario digite otro numero: ");
+                        op = Integer.parseInt(entrada.nextLine());
+                    } while (op != 0);
 
                     break;
                 case 5:
