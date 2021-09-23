@@ -15,8 +15,8 @@ package guiaresueltagrupo2;
 
 import guiaresueltagrupo2.Punto1.FuncionesyAtributos;
 import guiaresueltagrupo2.Punto2.FuncionesyAtributos2;
+import guiaresueltagrupo2.PuntoFinal.FuncionesyAtributos10;
 import java.util.Scanner;
-
 
 public class GuiaResueltaGrupo2 {
 
@@ -25,6 +25,7 @@ public class GuiaResueltaGrupo2 {
         Scanner entrada = new Scanner(System.in);
         FuncionesyAtributos obp1 = new FuncionesyAtributos();
         FuncionesyAtributos2 obp2 = new FuncionesyAtributos2();
+        FuncionesyAtributos10 obp10 = new FuncionesyAtributos10();
         do {
             System.err.println("MENU PRINCIPAL");
             System.out.println("Por favor escoger uno de los 10 ejercicios");
@@ -81,7 +82,7 @@ public class GuiaResueltaGrupo2 {
                                        Enunciado 3:
                                        Dado un número x determinar si es múltiplo de otro número y.
                                        """);
-                    
+
                     break;
                 case 4:
                     System.out.println("""
@@ -94,7 +95,7 @@ public class GuiaResueltaGrupo2 {
                                        ……….
                                        N (número de filas) se debe indicar por teclado.
                                        """);
-                   
+
                     break;
                 case 5:
                     System.out.println("""
@@ -166,7 +167,7 @@ public class GuiaResueltaGrupo2 {
                                        """);
                     break;
                 case 10:
-                    System.out.println("""
+                    System.err.println("""
                                        Enunciado 10:
                                        En una tienda de descuento, las personas que van a pagar el total de su compra llegan a
                                        la caja y sacan una bolita de color, que les dirá cuanto descuento tendrán sobre el total
@@ -174,10 +175,28 @@ public class GuiaResueltaGrupo2 {
                                        hasta que cierra. Se sabe que si el color de la bolita es roja el cliente obtendrá un 40% de
                                        descuento, si es amarilla un 25% y si es blanca no obtendrá descuento.
                                        """);
+                    do {
+                        System.err.print("""
+                                         Bienvenido al sistema de Facturación:
+                                         Ingrese el Precio de su Compra :
+                                         """);
+                        obp10.precio = Double.parseDouble(entrada.nextLine());
+                        System.out.println("""
+                                          Escoja el color de su Balota:
+                                         1.Blanco.
+                                         2.Rojo.
+                                         3.Amarillo 
+                                         """);
+                        obp10.balota = Integer.parseInt(entrada.nextLine());
+                        obp10.funcionBalota();
+
+                        System.err.print("Si desea salir al anterior menu digite 0 de lo contrario digite otro numero: ");
+                        op = Integer.parseInt(entrada.nextLine());
+                    } while (op != 0);
                     break;
 
                 case 11:
-                        
+
                     System.err.println("Finalizando software");
                     System.err.println("----------------------------------");
 
