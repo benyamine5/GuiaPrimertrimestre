@@ -13,6 +13,7 @@ Instrucciones:
  */
 package guiaresueltagrupo2;
 
+import guiaresueltagrupo2.DatosRepetitivos.Autores;
 import guiaresueltagrupo2.Punto1.FuncionesyAtributos;
 import guiaresueltagrupo2.Punto2.FuncionesyAtributos2;
 import guiaresueltagrupo2.Punto3.FuncionesyAtributos3;
@@ -26,6 +27,7 @@ public class GuiaResueltaGrupo2 {
     public static void main(String[] args) {
         int op;
         Scanner entrada = new Scanner(System.in);
+        Autores obAutores = new Autores();
         FuncionesyAtributos obp1 = new FuncionesyAtributos();
         FuncionesyAtributos2 obp2 = new FuncionesyAtributos2();
         FuncionesyAtributos3 obp3 = new FuncionesyAtributos3();
@@ -46,7 +48,6 @@ public class GuiaResueltaGrupo2 {
             System.out.println("8.  Ejercicio 8");
             System.out.println("9.  Ejercicio 9");
             System.out.println("10. Ejercicio 10");
-
             System.out.println("11. Salir");
             System.err.print("Digite la opcion a ejecutar: ");
             op = Integer.parseInt(entrada.nextLine());
@@ -74,20 +75,7 @@ public class GuiaResueltaGrupo2 {
                                 break;
 
                             case 2:
-                                System.err.println("Finalizando software");
-                                System.err.println("----------------------------------");
-
-                                System.err.println("""
-                                       Equipo desarrollador
-                                       1. Benjamin Guardo.
-                                       2. Carlos Alvarez.
-                                       3. Daneisy Martinez.
-                                       4. Jorge Castaño.
-                                       5. Langel Sanchez.
-                                        """);
-                                System.err.println("Gracias por utilizar nuestros servicios");
-                                System.err.println("***************************************");
-                                System.exit(0);
+                                obAutores.funcionAutores();
                                 break;
 
                             case 0:
@@ -118,27 +106,20 @@ public class GuiaResueltaGrupo2 {
                         op = Integer.parseInt(entrada.nextLine());
                         switch (op) {
                             case 1:
+
                                 System.out.print("Digite el valor en segundos: ");
                                 obp2.seg = Integer.parseInt(entrada.nextLine());
-                                obp2.funcionhhmmss();
-                                System.out.println(obp2.funcionhhmmss());
+                                if (obp2.seg <= 0) {
+                                    System.out.println("Error por favor digite un valor mayor a 0");
+                                } else {
+                                    obp2.funcionhhmmss();
+                                    System.out.println(obp2.funcionhhmmss());
+                                }
+
                                 break;
 
                             case 2:
-                                System.err.println("Finalizando software");
-                                System.err.println("----------------------------------");
-
-                                System.err.println("""
-                                       Equipo desarrollador
-                                       1. Benjamin Guardo.
-                                       2. Carlos Alvarez.
-                                       3. Daneisy Martinez.
-                                       4. Jorge Castaño.
-                                       5. Langel Sanchez.
-                                        """);
-                                System.err.println("Gracias por utilizar nuestros servicios");
-                                System.err.println("***************************************");
-                                System.exit(0);
+                                obAutores.funcionAutores();
                                 break;
 
                             case 0:
@@ -153,18 +134,18 @@ public class GuiaResueltaGrupo2 {
 
                     break;
                 case 3:
-                    System.err.println("""
+                    System.out.println("""
                                        Enunciado 3:
                                        Dado un número x determinar si es múltiplo de otro número y.
                                        """);
                     do {
-                        System.err.println("Determinador de multiplos");
-                        System.err.println("""
+                        System.out.println("Determinador de multiplos");
+                        System.out.println("""
                                            1. Ejecutar algoritmo.
                                            2. Terminar programa.
                                            0. Volver al menu anterior.
                                            """);
-                        System.err.print("Digitar opción a ejecutar: ");
+                        System.out.print("Digitar opción a ejecutar: ");
                         op = Integer.parseInt(entrada.nextLine());
                         switch (op) {
                             case 1:
@@ -172,24 +153,16 @@ public class GuiaResueltaGrupo2 {
                                 obp3.nv = Integer.parseInt(entrada.nextLine());
                                 System.out.print("Digite el numero que desea saber si es multiplo: ");
                                 obp3.nmultiplo = Integer.parseInt(entrada.nextLine());
-                                obp3.funcionMultiplo();
+                                if ((obp3.nv <= 0) || (obp3.nv <= 0)) {
+                                    System.out.println("Digite valores mayores a 0 por favor");
+                                } else {
+                                    obp3.funcionMultiplo();
+                                }
+
                                 break;
 
                             case 2:
-                                System.err.println("Finalizando software");
-                                System.err.println("----------------------------------");
-
-                                System.err.println("""
-                                       Equipo desarrollador
-                                       1. Benjamin Guardo.
-                                       2. Carlos Alvarez.
-                                       3. Daneisy Martinez.
-                                       4. Jorge Castaño.
-                                       5. Langel Sanchez.
-                                        """);
-                                System.err.println("Gracias por utilizar nuestros servicios");
-                                System.err.println("***************************************");
-                                System.exit(0);
+                                obAutores.funcionAutores();
                                 break;
 
                             case 0:
@@ -204,7 +177,7 @@ public class GuiaResueltaGrupo2 {
 
                     break;
                 case 4:
-                    System.err.println("""
+                    System.out.println("""
                                        Enunciado 4:
                                        Desarrollar un programa que, utilizando una función muestre en pantalla N filas de
                                        números naturales impares, de los siguientes números y en la forma siguiente:
@@ -215,36 +188,28 @@ public class GuiaResueltaGrupo2 {
                                        N (número de filas) se debe indicar por teclado.
                                        """);
                     do {
-                        System.err.println("Funcion numeros de filas impares");
-                        System.err.println("""
+                        System.out.println("Funcion numeros de filas impares");
+                        System.out.println("""
                                            1. Ejecutar algoritmo.
                                            2. Terminar programa.
                                            0. Volver al menu anterior.
                                            """);
-                        System.err.print("Digitar opción a ejecutar: ");
+                        System.out.print("Digitar opción a ejecutar: ");
                         op = Integer.parseInt(entrada.nextLine());
                         switch (op) {
                             case 1:
                                 System.out.print("Digite el número de filas que desea: ");
                                 obp4.nfilas = Integer.parseInt(entrada.nextLine());
-                                obp4.funcionnfilas();
+                                if (obp4.nfilas <= 0) {
+                                    System.out.println("Digite un valor mayor a 0");
+                                } else {
+                                    obp4.funcionnfilas();
+                                }
+
                                 break;
 
                             case 2:
-                                System.err.println("Finalizando software");
-                                System.err.println("----------------------------------");
-
-                                System.err.println("""
-                                       Equipo desarrollador
-                                       1. Benjamin Guardo.
-                                       2. Carlos Alvarez.
-                                       3. Daneisy Martinez.
-                                       4. Jorge Castaño.
-                                       5. Langel Sanchez.
-                                        """);
-                                System.err.println("Gracias por utilizar nuestros servicios");
-                                System.err.println("***************************************");
-                                System.exit(0);
+                                obAutores.funcionAutores();
                                 break;
 
                             case 0:
@@ -259,7 +224,7 @@ public class GuiaResueltaGrupo2 {
 
                     break;
                 case 5:
-                    System.err.println("""
+                    System.out.println("""
                                        Enunciado 5:
                                        Dada la siguiente sucesión de números: 2, 4, 8, 6, 36, 72, 70, 4900, 9800… mediante el
                                        uso de funciones, mostrar en pantalla los términos de esta serie y calcular la suma de N
@@ -267,36 +232,28 @@ public class GuiaResueltaGrupo2 {
                                        """);
 
                     do {
-                        System.err.println("Calculador de suma de sucesiones");
-                        System.err.println("""
+                        System.out.println("Calculador de suma de sucesiones");
+                        System.out.println("""
                                            1. Ejecutar algoritmo.
                                            2. Terminar programa.
                                            0. Volver al menu anterior.
                                            """);
-                        System.err.print("Digitar opción a ejecutar: ");
+                        System.out.print("Digitar opción a ejecutar: ");
                         op = Integer.parseInt(entrada.nextLine());
                         switch (op) {
                             case 1:
                                 System.out.print("Introduzca el limite de numeros: ");
                                 obp5.n = Integer.parseInt(entrada.nextLine());
-                                obp5.funcionCalculoSuma();
+                                if (obp5.n <= 0) {
+                                    System.out.println("Digite un valor mayor a 0");
+                                } else {
+                                    obp5.funcionCalculoSuma();
+                                }
+
                                 break;
 
                             case 2:
-                                System.err.println("Finalizando software");
-                                System.err.println("----------------------------------");
-
-                                System.err.println("""
-                                       Equipo desarrollador
-                                       1. Benjamin Guardo.
-                                       2. Carlos Alvarez.
-                                       3. Daneisy Martinez.
-                                       4. Jorge Castaño.
-                                       5. Langel Sanchez.
-                                        """);
-                                System.err.println("Gracias por utilizar nuestros servicios");
-                                System.err.println("***************************************");
-                                System.exit(0);
+                                obAutores.funcionAutores();
                                 break;
 
                             case 0:
@@ -307,7 +264,6 @@ public class GuiaResueltaGrupo2 {
                                 System.err.println("Error intente de nuevo escogiendo una de las opciones.");
                         }
 
-                        
                     } while (op != 0);
                     break;
                 case 6:
@@ -401,21 +357,8 @@ public class GuiaResueltaGrupo2 {
                     break;
 
                 case 11:
-                    finalizar:
-                    System.err.println("Finalizando software");
-                    System.err.println("----------------------------------");
 
-                    System.err.println("""
-                                       Equipo desarrollador
-                                       1. Benjamin Guardo.
-                                       2. Carlos Alvarez.
-                                       3. Daneisy Martinez.
-                                       4. Jorge Castaño.
-                                       5. Langel Sanchez.
-                                        """);
-                    System.err.println("Gracias por utilizar nuestros servicios");
-                    System.err.println("***************************************");
-                    System.exit(0);
+                    obAutores.funcionAutores();
                     break;
                 default:
                     System.err.println("Error intente de nuevo escogiendo una de las opciones.");
