@@ -3,7 +3,7 @@
 1. Benjamin Guardo Barrios.
 2. Carlos Alvarez Quintero.
 3. Daneisy Martinez Freile.
-4. Jorger Castaño Julio.
+4. Jorge Castaño Julio.
 5. Langel Sanchez.
 
 Instrucciones:
@@ -17,6 +17,7 @@ import guiaresueltagrupo2.Punto1.FuncionesyAtributos;
 import guiaresueltagrupo2.Punto2.FuncionesyAtributos2;
 import guiaresueltagrupo2.Punto3.FuncionesyAtributos3;
 import guiaresueltagrupo2.Punto4.FuncionesyAtributos4;
+import guiaresueltagrupo2.Punto5.FuncionesyAtributos5;
 import guiaresueltagrupo2.PuntoFinal.FuncionesyAtributos10;
 import java.util.Scanner;
 
@@ -29,7 +30,9 @@ public class GuiaResueltaGrupo2 {
         FuncionesyAtributos2 obp2 = new FuncionesyAtributos2();
         FuncionesyAtributos3 obp3 = new FuncionesyAtributos3();
         FuncionesyAtributos4 obp4 = new FuncionesyAtributos4();
+        FuncionesyAtributos5 obp5 = new FuncionesyAtributos5();
         FuncionesyAtributos10 obp10 = new FuncionesyAtributos10();
+        
         do {
             System.err.println("MENU PRINCIPAL");
             System.out.println("Por favor escoger uno de los 10 ejercicios");
@@ -65,7 +68,7 @@ public class GuiaResueltaGrupo2 {
 
                     break;
                 case 2:
-                    System.out.println("""
+                    System.err.println("""
                                        Enunciado 2:
                                        Escribir un programa que pida una hora en segundos y la saque en el formato “hh:mm:ss”,
                                        es decir horas, minutos y segundos.
@@ -120,12 +123,21 @@ public class GuiaResueltaGrupo2 {
 
                     break;
                 case 5:
-                    System.out.println("""
+                    System.err.println("""
                                        Enunciado 5:
                                        Dada la siguiente sucesión de números: 2, 4, 8, 6, 36, 72, 70, 4900, 9800… mediante el
                                        uso de funciones, mostrar en pantalla los términos de esta serie y calcular la suma de N
                                        (N se indica por teclado), elementos, es decir, SUMA=2+4+8+6+……
                                        """);
+                    System.err.println("Bienvenido al calculador de suma de sucesiones");
+                    do { 
+                         
+                         System.out.print("Introduzca el limite de numeros: ");
+                         obp5.n = Integer.parseInt(entrada.nextLine());
+                         obp5.funcionCalculoSuma();
+                         System.err.print("Si desea regresar al menu anterior digite 0 de lo contrario digite otro numero: ");
+                         op = Integer.parseInt(entrada.nextLine());
+                    } while (op !=0);
                     break;
                 case 6:
                     System.out.println("""
