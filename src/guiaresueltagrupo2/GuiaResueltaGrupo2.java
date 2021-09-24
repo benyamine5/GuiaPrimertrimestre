@@ -32,7 +32,7 @@ public class GuiaResueltaGrupo2 {
         FuncionesyAtributos4 obp4 = new FuncionesyAtributos4();
         FuncionesyAtributos5 obp5 = new FuncionesyAtributos5();
         FuncionesyAtributos10 obp10 = new FuncionesyAtributos10();
-        
+
         do {
             System.err.println("MENU PRINCIPAL");
             System.out.println("Por favor escoger uno de los 10 ejercicios");
@@ -59,11 +59,45 @@ public class GuiaResueltaGrupo2 {
                                        """);
                     do {
                         System.err.println("Bienvenido al ejecutor de numero par e impar ");
-                        System.out.print("Digite un número: ");
-                        obp1.n = Integer.parseInt(entrada.nextLine());
-                        obp1.Funcionpareimpar();
-                        System.err.print("Si regresar al menu anterior digite 0 de lo contrario digite otro numero: ");
+                        System.err.println("""
+                                           1. Ejecutar algoritmo.
+                                           2. Terminar programa.
+                                           0. Volver al menu anterior.
+                                           """);
+                        System.err.print("Digitar opción a ejecutar: ");
                         op = Integer.parseInt(entrada.nextLine());
+                        switch (op) {
+                            case 1:
+                                System.out.print("Digite un número: ");
+                                obp1.n = Integer.parseInt(entrada.nextLine());
+                                obp1.Funcionpareimpar();
+                                break;
+
+                            case 2:
+                                System.err.println("Finalizando software");
+                                System.err.println("----------------------------------");
+
+                                System.err.println("""
+                                       Equipo desarrollador
+                                       1. Benjamin Guardo.
+                                       2. Carlos Alvarez.
+                                       3. Daneisy Martinez.
+                                       4. Jorge Castaño.
+                                       5. Langel Sanchez.
+                                        """);
+                                System.err.println("Gracias por utilizar nuestros servicios");
+                                System.err.println("***************************************");
+                                System.exit(0);
+                                break;
+
+                            case 0:
+                                op = 0;
+                                break;
+
+                            default:
+                                System.err.println("Error intente de nuevo escogiendo una de las opciones.");
+                        }
+
                     } while (op != 0);
 
                     break;
@@ -75,12 +109,46 @@ public class GuiaResueltaGrupo2 {
                                        """);
                     do {
                         System.err.println("Convertidor de segundos a HH:MM:SS");
-                        System.out.print("Digite el valor en segundos: ");
-                        obp2.seg = Integer.parseInt(entrada.nextLine());
-                        obp2.funcionhhmmss();
-                        System.out.println(obp2.funcionhhmmss());
-                        System.err.print("Si desea regresar al menu anterior digite 0 de lo contrario digite otro numero: ");
+                        System.err.println("""
+                                           1. Ejecutar algoritmo.
+                                           2. Terminar programa.
+                                           0. Volver al menu anterior.
+                                           """);
+                        System.err.print("Digitar opción a ejecutar: ");
                         op = Integer.parseInt(entrada.nextLine());
+                        switch (op) {
+                            case 1:
+                                System.out.print("Digite el valor en segundos: ");
+                                obp2.seg = Integer.parseInt(entrada.nextLine());
+                                obp2.funcionhhmmss();
+                                System.out.println(obp2.funcionhhmmss());
+                                break;
+
+                            case 2:
+                                System.err.println("Finalizando software");
+                                System.err.println("----------------------------------");
+
+                                System.err.println("""
+                                       Equipo desarrollador
+                                       1. Benjamin Guardo.
+                                       2. Carlos Alvarez.
+                                       3. Daneisy Martinez.
+                                       4. Jorge Castaño.
+                                       5. Langel Sanchez.
+                                        """);
+                                System.err.println("Gracias por utilizar nuestros servicios");
+                                System.err.println("***************************************");
+                                System.exit(0);
+                                break;
+
+                            case 0:
+                                op = 0;
+                                break;
+
+                            default:
+                                System.err.println("Error intente de nuevo escogiendo una de las opciones.");
+                        }
+
                     } while (op != 0);
 
                     break;
@@ -91,13 +159,47 @@ public class GuiaResueltaGrupo2 {
                                        """);
                     do {
                         System.err.println("Determinador de multiplos");
-                        System.out.print("Digite el numero a determinar si es multiplo: ");
-                        obp3.nv = Integer.parseInt(entrada.nextLine());
-                        System.out.print("Digite el numero que desea saber si es multiplo: ");
-                        obp3.nmultiplo = Integer.parseInt(entrada.nextLine());
-                        obp3.funcionMultiplo();
-                        System.err.print("Si desea regresar al menu anterior digite 0 de lo contrario digite otro numero: ");
+                        System.err.println("""
+                                           1. Ejecutar algoritmo.
+                                           2. Terminar programa.
+                                           0. Volver al menu anterior.
+                                           """);
+                        System.err.print("Digitar opción a ejecutar: ");
                         op = Integer.parseInt(entrada.nextLine());
+                        switch (op) {
+                            case 1:
+                                System.out.print("Digite el numero a determinar si es multiplo: ");
+                                obp3.nv = Integer.parseInt(entrada.nextLine());
+                                System.out.print("Digite el numero que desea saber si es multiplo: ");
+                                obp3.nmultiplo = Integer.parseInt(entrada.nextLine());
+                                obp3.funcionMultiplo();
+                                break;
+
+                            case 2:
+                                System.err.println("Finalizando software");
+                                System.err.println("----------------------------------");
+
+                                System.err.println("""
+                                       Equipo desarrollador
+                                       1. Benjamin Guardo.
+                                       2. Carlos Alvarez.
+                                       3. Daneisy Martinez.
+                                       4. Jorge Castaño.
+                                       5. Langel Sanchez.
+                                        """);
+                                System.err.println("Gracias por utilizar nuestros servicios");
+                                System.err.println("***************************************");
+                                System.exit(0);
+                                break;
+
+                            case 0:
+                                op = 0;
+                                break;
+
+                            default:
+                                System.err.println("Error intente de nuevo escogiendo una de las opciones.");
+                        }
+
                     } while (op != 0);
 
                     break;
@@ -114,11 +216,45 @@ public class GuiaResueltaGrupo2 {
                                        """);
                     do {
                         System.err.println("Funcion numeros de filas impares");
-                        System.out.print("Digite el número de filas que desea: ");
-                        obp4.nfilas = Integer.parseInt(entrada.nextLine());
-                        obp4.funcionnfilas();
-                        System.err.print("Si desea regresar al menu anterior digite 0 de lo contrario digite otro numero: ");
+                        System.err.println("""
+                                           1. Ejecutar algoritmo.
+                                           2. Terminar programa.
+                                           0. Volver al menu anterior.
+                                           """);
+                        System.err.print("Digitar opción a ejecutar: ");
                         op = Integer.parseInt(entrada.nextLine());
+                        switch (op) {
+                            case 1:
+                                System.out.print("Digite el número de filas que desea: ");
+                                obp4.nfilas = Integer.parseInt(entrada.nextLine());
+                                obp4.funcionnfilas();
+                                break;
+
+                            case 2:
+                                System.err.println("Finalizando software");
+                                System.err.println("----------------------------------");
+
+                                System.err.println("""
+                                       Equipo desarrollador
+                                       1. Benjamin Guardo.
+                                       2. Carlos Alvarez.
+                                       3. Daneisy Martinez.
+                                       4. Jorge Castaño.
+                                       5. Langel Sanchez.
+                                        """);
+                                System.err.println("Gracias por utilizar nuestros servicios");
+                                System.err.println("***************************************");
+                                System.exit(0);
+                                break;
+
+                            case 0:
+                                op = 0;
+                                break;
+
+                            default:
+                                System.err.println("Error intente de nuevo escogiendo una de las opciones.");
+                        }
+
                     } while (op != 0);
 
                     break;
@@ -129,15 +265,50 @@ public class GuiaResueltaGrupo2 {
                                        uso de funciones, mostrar en pantalla los términos de esta serie y calcular la suma de N
                                        (N se indica por teclado), elementos, es decir, SUMA=2+4+8+6+……
                                        """);
-                    System.err.println("Bienvenido al calculador de suma de sucesiones");
-                    do { 
-                         
-                         System.out.print("Introduzca el limite de numeros: ");
-                         obp5.n = Integer.parseInt(entrada.nextLine());
-                         obp5.funcionCalculoSuma();
-                         System.err.print("Si desea regresar al menu anterior digite 0 de lo contrario digite otro numero: ");
-                         op = Integer.parseInt(entrada.nextLine());
-                    } while (op !=0);
+
+                    do {
+                        System.err.println("Calculador de suma de sucesiones");
+                        System.err.println("""
+                                           1. Ejecutar algoritmo.
+                                           2. Terminar programa.
+                                           0. Volver al menu anterior.
+                                           """);
+                        System.err.print("Digitar opción a ejecutar: ");
+                        op = Integer.parseInt(entrada.nextLine());
+                        switch (op) {
+                            case 1:
+                                System.out.print("Introduzca el limite de numeros: ");
+                                obp5.n = Integer.parseInt(entrada.nextLine());
+                                obp5.funcionCalculoSuma();
+                                break;
+
+                            case 2:
+                                System.err.println("Finalizando software");
+                                System.err.println("----------------------------------");
+
+                                System.err.println("""
+                                       Equipo desarrollador
+                                       1. Benjamin Guardo.
+                                       2. Carlos Alvarez.
+                                       3. Daneisy Martinez.
+                                       4. Jorge Castaño.
+                                       5. Langel Sanchez.
+                                        """);
+                                System.err.println("Gracias por utilizar nuestros servicios");
+                                System.err.println("***************************************");
+                                System.exit(0);
+                                break;
+
+                            case 0:
+                                op = 0;
+                                break;
+
+                            default:
+                                System.err.println("Error intente de nuevo escogiendo una de las opciones.");
+                        }
+
+                        
+                    } while (op != 0);
                     break;
                 case 6:
                     System.out.println("""
@@ -230,7 +401,7 @@ public class GuiaResueltaGrupo2 {
                     break;
 
                 case 11:
-
+                    finalizar:
                     System.err.println("Finalizando software");
                     System.err.println("----------------------------------");
 
@@ -247,7 +418,7 @@ public class GuiaResueltaGrupo2 {
                     System.exit(0);
                     break;
                 default:
-                    System.err.println("Error");
+                    System.err.println("Error intente de nuevo escogiendo una de las opciones.");
             }
 
         } while (op != 11);

@@ -25,7 +25,7 @@ public class FuncionesyAtributos5 {
             datos[i+3] = a;
         }
         for (int i = 0; i < this.n; i++) {
-            System.out.print(formateardouble.format(datos[i])+ " ");
+            System.out.print(formateardouble.format(datos[i])+ " - ");
             s += datos[i];
             
         }
