@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class FuncionesyAtributos6 {
 
-    int a = (int) ((Math.random() * 50) + 1);
     public int b;
 
     public void funcionCalculoAzar() {
+        int a = (int) ((Math.random() * 50) + 1);
         int nmayor = 50, nmenor = 1;
         Scanner sc = new Scanner(System.in);
         System.out.println("El juego consiste en averiguar un número secreto de 50 posibles.");
@@ -18,17 +18,17 @@ public class FuncionesyAtributos6 {
 
         for (int i = 0; i <= 4; i++) {
 
-            if (this.a == this.b) {
+            if (a == this.b) {
                 System.out.println("Felicidades acertaste el numero que pensé era: " + a);
                 break;
             } else if (i == 4) {
                 System.out.println("Se acabaron los intentos, el número que pensé era " + a);
                 break;
-            } else if (this.b > this.a) {
+            } else if (this.b > a) {
                 nmayor = this.b;
                 System.out.println("El número secreto esta entre " + nmenor + " y " + nmayor);
-            } else if (b < a) {
-                nmenor = b;
+            } else if (this.b < a) {
+                nmenor = this.b;
                 System.out.println("El número secreto esta entre " + nmenor + " y " + nmayor);
             }
 

@@ -165,7 +165,7 @@ public class GuiaResueltaGrupo2 {
                                 obp3.nv = Integer.parseInt(entrada.nextLine());
                                 System.out.print("Digite el numero que desea saber si es multiplo: ");
                                 obp3.nmultiplo = Integer.parseInt(entrada.nextLine());
-                                if ((obp3.nv <= 0) || (obp3.nv <= 0)) {
+                                if ((obp3.nv <= 0) || (obp3.nmultiplo <= 0)) {
                                     System.out.println("Digite valores mayores a 0 por favor");
                                 } else {
                                     obp3.funcionMultiplo();
@@ -488,11 +488,12 @@ public class GuiaResueltaGrupo2 {
                                 obp10.precio = Double.parseDouble(entrada.nextLine());
                                 System.out.println(" ");
                                 System.out.println("""
-                                          Escoja el color de su Balota:
+                                         Escoja el color de su Balota:
                                          1.Blanco.
                                          2.Rojo.
                                          3.Amarillo 
                                          """);
+                                System.out.print("Digite su opcion: ");
                                 obp10.balota = Integer.parseInt(entrada.nextLine());
                                 obp10.funcionBalota();
                                 break;

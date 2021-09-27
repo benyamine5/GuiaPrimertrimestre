@@ -15,7 +15,7 @@ public class FuncionesyAtributos5 {
         datos = new double[500];
 
         for (int i = 0; i <= this.n; i += 3) {
-
+            
             datos[i] = a;
             a = sucesion1(a);
             datos[i + 1] = a;
