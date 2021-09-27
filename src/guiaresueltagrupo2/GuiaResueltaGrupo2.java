@@ -19,6 +19,10 @@ import guiaresueltagrupo2.Punto2.FuncionesyAtributos2;
 import guiaresueltagrupo2.Punto3.FuncionesyAtributos3;
 import guiaresueltagrupo2.Punto4.FuncionesyAtributos4;
 import guiaresueltagrupo2.Punto5.FuncionesyAtributos5;
+import guiaresueltagrupo2.Punto6.FuncionesyAtributos6;
+import guiaresueltagrupo2.Punto7.FuncionesyAtributos7;
+import guiaresueltagrupo2.Punto8.FuncionesyAtributos8;
+import guiaresueltagrupo2.Punto9.FuncionesyAtributos9;
 import guiaresueltagrupo2.PuntoFinal.FuncionesyAtributos10;
 import java.util.Scanner;
 
@@ -33,6 +37,10 @@ public class GuiaResueltaGrupo2 {
         FuncionesyAtributos3 obp3 = new FuncionesyAtributos3();
         FuncionesyAtributos4 obp4 = new FuncionesyAtributos4();
         FuncionesyAtributos5 obp5 = new FuncionesyAtributos5();
+        FuncionesyAtributos6 obp6 = new FuncionesyAtributos6();
+        FuncionesyAtributos7 obp7 = new FuncionesyAtributos7();
+        FuncionesyAtributos8 obp8 = new FuncionesyAtributos8();
+        FuncionesyAtributos9 obp9 = new FuncionesyAtributos9();
         FuncionesyAtributos10 obp10 = new FuncionesyAtributos10();
 
         do {
@@ -59,6 +67,7 @@ public class GuiaResueltaGrupo2 {
                                        impar.
                                        """);
                     do {
+                        System.out.println("-------------------------------------------------");
                         System.err.println("Bienvenido al ejecutor de numero par e impar ");
                         System.err.println("""
                                            1. Ejecutar algoritmo.
@@ -96,6 +105,7 @@ public class GuiaResueltaGrupo2 {
                                        es decir horas, minutos y segundos.
                                        """);
                     do {
+                        System.out.println("-------------------------------------------------");
                         System.err.println("Convertidor de segundos a HH:MM:SS");
                         System.err.println("""
                                            1. Ejecutar algoritmo.
@@ -139,6 +149,7 @@ public class GuiaResueltaGrupo2 {
                                        Dado un número x determinar si es múltiplo de otro número y.
                                        """);
                     do {
+                        System.out.println("-------------------------------------------------");
                         System.out.println("Determinador de multiplos");
                         System.out.println("""
                                            1. Ejecutar algoritmo.
@@ -188,6 +199,7 @@ public class GuiaResueltaGrupo2 {
                                        N (número de filas) se debe indicar por teclado.
                                        """);
                     do {
+                        System.out.println("-------------------------------------------------");
                         System.out.println("Funcion numeros de filas impares");
                         System.out.println("""
                                            1. Ejecutar algoritmo.
@@ -232,6 +244,7 @@ public class GuiaResueltaGrupo2 {
                                        """);
 
                     do {
+                        System.out.println("-------------------------------------------------");
                         System.out.println("Calculador de suma de sucesiones");
                         System.out.println("""
                                            1. Ejecutar algoritmo.
@@ -286,6 +299,37 @@ public class GuiaResueltaGrupo2 {
                                        Si es correcto, que muestre: “Felicidades, adivinaste el número”
                                        De lo contrario: “Se acabaron los intentos, el número que pensé era 42”
                                        """);
+                    do {
+                        System.out.println("-------------------------------------------------");
+                        System.out.println("Bienvenido al juego numero al azar");
+                        System.out.println("""
+                                           1. Ejecutar algoritmo.
+                                           2. Terminar programa.
+                                           0. Volver al menu anterior.
+                                           """);
+                        System.out.print("Digitar opción a ejecutar: ");
+                        op = Integer.parseInt(entrada.nextLine());
+                        switch (op) {
+                            case 1:
+
+                                obp6.funcionCalculoAzar();
+
+                                break;
+
+                            case 2:
+                                obAutores.funcionAutores();
+                                break;
+
+                            case 0:
+                                op = 0;
+                                break;
+
+                            default:
+                                System.err.println("Error intente de nuevo escogiendo una de las opciones.");
+                        }
+
+                    } while (op != 0);
+
                     break;
                 case 7:
                     System.out.println("""
@@ -295,6 +339,39 @@ public class GuiaResueltaGrupo2 {
                                        b) F = A2 – 2* B Si A2 – B2 = 0
                                        c) A + B Si A2 – B2 > 0
                                        """);
+
+                    do {
+                        System.out.println("-------------------------------------------------");
+                        System.out.println("Calculador de F");
+                        System.out.println("""
+                                           1. Ejecutar algoritmo.
+                                           2. Terminar programa.
+                                           0. Volver al menu anterior.
+                                           """);
+                        System.out.print("Digitar opción a ejecutar: ");
+                        op = Integer.parseInt(entrada.nextLine());
+                        switch (op) {
+                            case 1:
+                                System.out.print("Introduzca el valor de A: ");
+                                obp7.a = Integer.parseInt(entrada.nextLine());
+                                System.out.print("Introduzca el valor de B: ");
+                                obp7.b = Integer.parseInt(entrada.nextLine());
+                                obp7.funcionCalculoF();
+                                break;
+
+                            case 2:
+                                obAutores.funcionAutores();
+                                break;
+
+                            case 0:
+                                op = 0;
+                                break;
+
+                            default:
+                                System.err.println("Error intente de nuevo escogiendo una de las opciones.");
+                        }
+
+                    } while (op != 0);
                     break;
                 case 8:
                     System.out.println("""
@@ -316,6 +393,34 @@ public class GuiaResueltaGrupo2 {
                                        alumnos de profesional es de $300 por cada cinco unidades y para alumnos de
                                        preparatoria es de $180 por cada cinco unidades.
                                        """);
+                    do {
+                        System.out.println("-------------------------------------------------");
+                        System.out.println("Calculador de total a pagar");
+                        System.out.println("""
+                                           1. Ejecutar algoritmo.
+                                           2. Terminar programa.
+                                           0. Volver al menu anterior.
+                                           """);
+                        System.out.print("Digitar opción a ejecutar: ");
+                        op = Integer.parseInt(entrada.nextLine());
+                        switch (op) {
+                            case 1:
+                                obp8.Funcionej8();
+                                break;
+
+                            case 2:
+                                obAutores.funcionAutores();
+                                break;
+
+                            case 0:
+                                op = 0;
+                                break;
+
+                            default:
+                                System.err.println("Error intente de nuevo escogiendo una de las opciones.");
+                        }
+
+                    } while (op != 0);
                     break;
                 case 9:
                     System.out.println("""
@@ -326,9 +431,37 @@ public class GuiaResueltaGrupo2 {
                                        obtendrá en la semana cada vendedor, por concepto de comisiones por las tres ventas
                                        realizadas, y cuánto, tomando en cuenta su sueldo base y sus comisiones.
                                        """);
+                    do {
+                        System.out.println("-------------------------------------------------");
+                        System.out.println("Calculador de salario y comisiones de empleados.");
+                        System.out.println("""
+                                           1. Ejecutar algoritmo.
+                                           2. Terminar programa.
+                                           0. Volver al menu anterior.
+                                           """);
+                        System.out.print("Digitar opción a ejecutar: ");
+                        op = Integer.parseInt(entrada.nextLine());
+                        switch (op) {
+                            case 1:
+                                obp9.calcularSalarioEmpleados();
+                                break;
+
+                            case 2:
+                                obAutores.funcionAutores();
+                                break;
+
+                            case 0:
+                                op = 0;
+                                break;
+
+                            default:
+                                System.err.println("Error intente de nuevo escogiendo una de las opciones.");
+                        }
+
+                    } while (op != 0);
                     break;
                 case 10:
-                    System.err.println("""
+                    System.out.println("""
                                        Enunciado 10:
                                        En una tienda de descuento, las personas que van a pagar el total de su compra llegan a
                                        la caja y sacan una bolita de color, que les dirá cuanto descuento tendrán sobre el total
@@ -337,22 +470,44 @@ public class GuiaResueltaGrupo2 {
                                        descuento, si es amarilla un 25% y si es blanca no obtendrá descuento.
                                        """);
                     do {
-                        System.err.print("""
-                                         Bienvenido al sistema de Facturación:
-                                         Ingrese el Precio de su Compra :
+                        System.out.println("-------------------------------------------------");
+                        System.out.print("""
+                                         Bienvenido al sistema de Facturación:                                     
                                          """);
-                        obp10.precio = Double.parseDouble(entrada.nextLine());
                         System.out.println("""
+                                           1. Ejecutar algoritmo.
+                                           2. Terminar programa.
+                                           0. Volver al menu anterior.
+                                           """);
+                        System.out.print("Digitar opción a ejecutar: ");
+                        op = Integer.parseInt(entrada.nextLine());
+                        switch (op) {
+                            case 1:
+                                System.out.print("Digite el precio: ");
+                                obp10.precio = Double.parseDouble(entrada.nextLine());
+                                System.out.println(" ");
+                                System.out.println("""
                                           Escoja el color de su Balota:
                                          1.Blanco.
                                          2.Rojo.
                                          3.Amarillo 
                                          """);
-                        obp10.balota = Integer.parseInt(entrada.nextLine());
-                        obp10.funcionBalota();
+                                obp10.balota = Integer.parseInt(entrada.nextLine());
+                                obp10.funcionBalota();
+                                break;
 
-                        System.err.print("Si desea salir al anterior menu digite 0 de lo contrario digite otro numero: ");
-                        op = Integer.parseInt(entrada.nextLine());
+                            case 2:
+                                obAutores.funcionAutores();
+                                break;
+
+                            case 0:
+                                op = 0;
+                                break;
+
+                            default:
+                                System.err.println("Error intente de nuevo escogiendo una de las opciones.");
+                        }
+
                     } while (op != 0);
                     break;
 
