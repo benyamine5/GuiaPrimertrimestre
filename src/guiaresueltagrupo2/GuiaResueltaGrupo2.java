@@ -61,20 +61,20 @@ public class GuiaResueltaGrupo2 {
             op = Integer.parseInt(entrada.nextLine());
             switch (op) {
                 case 1:
-                    System.err.println("""
+                    System.out.println("""
                                        Enunciado 1:
                                        Dado un número entero y positivo que se introduce por teclado, determinar si es par o
                                        impar.
                                        """);
                     do {
                         System.out.println("-------------------------------------------------");
-                        System.err.println("Bienvenido al ejecutor de numero par e impar ");
-                        System.err.println("""
+                        System.out.println("Bienvenido al ejecutor de numero par e impar ");
+                        System.out.println("""
                                            1. Ejecutar algoritmo.
                                            2. Terminar programa.
                                            0. Volver al menu anterior.
                                            """);
-                        System.err.print("Digitar opción a ejecutar: ");
+                        System.out.print("Digitar opción a ejecutar: ");
                         op = Integer.parseInt(entrada.nextLine());
                         switch (op) {
                             case 1:
@@ -99,20 +99,20 @@ public class GuiaResueltaGrupo2 {
 
                     break;
                 case 2:
-                    System.err.println("""
+                    System.out.println("""
                                        Enunciado 2:
                                        Escribir un programa que pida una hora en segundos y la saque en el formato “hh:mm:ss”,
                                        es decir horas, minutos y segundos.
                                        """);
                     do {
                         System.out.println("-------------------------------------------------");
-                        System.err.println("Convertidor de segundos a HH:MM:SS");
-                        System.err.println("""
+                        System.out.println("Convertidor de segundos a HH:MM:SS");
+                        System.out.println("""
                                            1. Ejecutar algoritmo.
                                            2. Terminar programa.
                                            0. Volver al menu anterior.
                                            """);
-                        System.err.print("Digitar opción a ejecutar: ");
+                        System.out.print("Digitar opción a ejecutar: ");
                         op = Integer.parseInt(entrada.nextLine());
                         switch (op) {
                             case 1:
@@ -129,6 +129,7 @@ public class GuiaResueltaGrupo2 {
                                 break;
 
                             case 2:
+                                
                                 obAutores.funcionAutores();
                                 break;
 
@@ -512,7 +513,6 @@ public class GuiaResueltaGrupo2 {
                     break;
 
                 case 11:
-
                     obAutores.funcionAutores();
                     break;
                 default:
