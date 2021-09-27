@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package guiaresueltagrupo2.Punto8;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Benjamin
- */
 public class FuncionesyAtributos8 {
-        public  void Funcionej8() {
+
+    public void Funcionej8() {
         int vunidadpro = 60, vunipre = 36, v, mrepro;
         double vdesc, prom;
         Scanner datos = new Scanner(System.in);
@@ -72,11 +64,10 @@ public class FuncionesyAtributos8 {
 
             }
 
-        }
-        else if(v==2){
+        } else if (v == 2) {
             System.out.print("Digite su promedio: ");
             prom = Double.parseDouble(datos.nextLine());
-            if(prom>=9.5){
+            if (prom >= 9.5) {
                 vdesc = (55 * vunidadpro) * 0.75;
                 System.out.println("""
                                    Por ser alumno profesional y tener promedio mayor o igual  a 9.5 usted goza de los siguientes estimulos:
@@ -84,16 +75,15 @@ public class FuncionesyAtributos8 {
                                    -Acceso a 55 unidades.
                                    """);
                 System.out.println("El valor de 55 unidades sin descuento es: " + (55 * vunidadpro) + " con 25% el valor es: " + vdesc);
-            }
-            else if(prom<9.5){
-                 vdesc = (55 * vunidadpro);
+            } else if (prom < 9.5) {
+                vdesc = (55 * vunidadpro);
                 System.out.println("""
                                    Por ser alumno profesional y tener promedio menor a 9.5 usted goza de los siguientes estimulos:
                                    -Acceso a 55 unidades.
                                    """);
-                System.out.println("El valor de 55 unidades sin descuento es: "+ vdesc);
+                System.out.println("El valor de 55 unidades sin descuento es: " + vdesc);
             }
         }
-    
+
     }
 }

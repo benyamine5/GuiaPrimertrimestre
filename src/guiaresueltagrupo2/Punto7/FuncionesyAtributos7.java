@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package guiaresueltagrupo2.Punto7;
 
 import java.text.DecimalFormat;
@@ -20,13 +15,13 @@ public class FuncionesyAtributos7 {
 
         if (op1 < 0) {
             F = (2 * this.a) + this.b;
-            System.out.println("Debido a que (A^2 - B^2) es menor a 0 el resultado es: "+formateardouble.format(F));
+            System.out.println("Debido a que (A^2 - B^2) es menor a 0 el resultado es: " + formateardouble.format(F));
         } else if (op1 == 0) {
             F = Math.pow(this.a, 2) - (2 * this.b);
-            System.out.println("Debido a que (A^2 - B^2) es igual a 0 el resultado es: "+formateardouble.format(F));
+            System.out.println("Debido a que (A^2 - B^2) es igual a 0 el resultado es: " + formateardouble.format(F));
         } else if (op1 > 0) {
             F = this.a + this.b;
-            System.out.println("Debido a que (A^2 - B^2) es mayor a 0 el resultado es: "+formateardouble.format(F));
+            System.out.println("Debido a que (A^2 - B^2) es mayor a 0 el resultado es: " + formateardouble.format(F));
         }
     }
 }
