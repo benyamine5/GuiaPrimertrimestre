@@ -10,10 +10,11 @@ public class FuncionesyAtributos9 {
         DecimalFormat formateardouble = new DecimalFormat();
         formateardouble.setDecimalSeparatorAlwaysShown(false);
         int nvendedores;
-        double ventas, sventas = 0, cventas, sbase;
+        double ventas, cventas, sbase;
         System.out.print("Digite la cantidad de vendedores: ");
         nvendedores = Integer.parseInt(datos.nextLine());
         for (int j = 0; j < nvendedores; j++) {
+            double sventas =0;
             System.out.println("   ");
             System.out.print("Digite salario base de vendedor No." + (j + 1) + ": ");
             sbase = Double.parseDouble(datos.nextLine());
